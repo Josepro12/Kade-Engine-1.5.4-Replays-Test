@@ -45,6 +45,7 @@ class Character extends FlxSprite
 				animation.addByIndices('hairBlow', "GF Dancing Beat Hair blowing", [0, 1, 2, 3], "", 24);
 				animation.addByIndices('hairFall', "GF Dancing Beat Hair Landing", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "", 24, false);
 				animation.addByPrefix('scared', 'GF FEAR', 24);
+				animation.addByPrefix('scaredinhell', 'GF FEAR', 24, true);
 
 				addOffset('cheer');
 				addOffset('sad', -2, -2);
@@ -59,6 +60,7 @@ class Character extends FlxSprite
 				addOffset('hairFall', 0, -9);
 
 				addOffset('scared', -2, -17);
+				addOffset('scaredinhell', -2, -17);
 
 				playAnim('danceRight');
 
@@ -118,13 +120,13 @@ class Character extends FlxSprite
 
 				playAnim('danceRight');
 
-				setGraphicSize(Std.int(width * PlayState.daPixelZoom));
+				
 				updateHitbox();
 				antialiasing = false;
 
 			case 'dad':
 				// DAD ANIMATION LOADING CODE
-				tex = Paths.getSparrowAtlas('characters/DADDY_DEAREST', 'shared');
+				tex = Paths.getSparrowAtlas('characters/DADDY_DEAREST');
 				frames = tex;
 				animation.addByPrefix('idle', 'Dad idle dance', 24);
 				animation.addByPrefix('singUP', 'Dad Sing Note UP', 24);
@@ -267,11 +269,8 @@ class Character extends FlxSprite
 				flipX = true;
 
 			case 'bf':
-				var tex = Paths.getSparrowAtlas('characters/BOYFRIEND', 'shared');
+				var tex = Paths.getSparrowAtlas('characters/BOYFRIEND');
 				frames = tex;
-
-				trace(tex.frames.length);
-
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
 				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
@@ -288,6 +287,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
 
 				animation.addByPrefix('scared', 'BF idle shaking', 24);
+				animation.addByPrefix('scaredinhell', 'BF idle shaking', 24, true);
 
 				addOffset('idle', -5);
 				addOffset("singUP", -29, 27);
@@ -303,6 +303,7 @@ class Character extends FlxSprite
 				addOffset('deathLoop', 37, 5);
 				addOffset('deathConfirm', 37, 69);
 				addOffset('scared', -4);
+				addOffset('scaredinhell', -4);
 
 				playAnim('idle');
 
@@ -498,8 +499,7 @@ class Character extends FlxSprite
 				addOffset("singDOWN-alt", -30, -27);
 
 				playAnim('idle');
-				
-				//SERGIO EVENT
+			//SERGIO EVENT
 			case 'vinnocent':
 				// DAD ANIMATION LOADING CODE
 				tex = Paths.getSparrowAtlas('characters/vincent_assets');
@@ -615,6 +615,7 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 
+			
 		}
 
 		dance();
@@ -657,7 +658,6 @@ class Character extends FlxSprite
 				dadVar = 6.1;
 			if (holdTimer >= Conductor.stepCrochet * dadVar * 0.001)
 			{
-				trace('dance');
 				dance();
 				holdTimer = 0;
 			}

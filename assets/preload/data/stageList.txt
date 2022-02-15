@@ -1,5 +1,11 @@
 stage
-animeExpo
-fireaaa
-happy
-sameshitjustforanothersong
+halloween
+philly
+limo
+mall
+mallEvil
+school
+schoolEvil
+diningarea
+minigames
+puppetstage

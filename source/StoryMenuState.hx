@@ -12,7 +12,7 @@ import flixel.text.FlxText;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
-import lime.net.curl.CURLCode;
+import lime.net.curlCURLCode;
 
 #if windows
 import Discord.DiscordClient;
@@ -26,10 +26,10 @@ class StoryMenuState extends MusicBeatState
 
 	var weekData:Array<Dynamic> = [
 		['Tutorial'],
-		['Bopeebo', 'Fresh', 'Dad Battle'],
-		['Spookeez', 'South', "Monster"],
-		['Pico', 'Philly Nice', "Blammed"],
-		['Satin Panties', "High", "Milf"],
+		['Nightshift', 'Flashinglights', 'Shadows'],
+		['Nightshift-Hard', 'Flashinglights-Hard', 'Shadows-Hard'],
+		['Nightshift-Easy', 'Flashinglights-Easy', 'Shadows-Easy'],
+		['Nightshift-Freeplay', 'Flashinglights-Freeplay', 'Shadows-Freeplay']
 		['Cocoa', 'Eggnog', 'Winter Horrorland'],
 		['Senpai', 'Roses', 'Thorns']
 	];
@@ -39,20 +39,18 @@ class StoryMenuState extends MusicBeatState
 
 	var weekCharacters:Array<Dynamic> = [
 		['', 'bf', 'gf'],
-		['dad', 'bf', 'gf'],
-		['spooky', 'bf', 'gf'],
-		['pico', 'bf', 'gf'],
-		['mom', 'bf', 'gf'],
-		['parents-christmas', 'bf', 'gf'],
-		['senpai', 'bf', 'gf']
+		['witheredfreddy', 'bf', 'gf'],
+		['witheredfreddy', 'bf', 'gf'],
+		['witheredfreddy', 'bf', 'gf'],
+		['witheredfreddy', 'bf', 'gf'],
 	];
 
 	var weekNames:Array<String> = [
 		"",
-		"Daddy Dearest",
-		"Spooky Month",
-		"PICO",
-		"MOMMY MUST MURDER",
+		"Week WF",
+		"Week WF-Hard",
+		"Week WF-Easy",
+		"Week WF-Freeplay"
 		"RED SNOW",
 		"Hating Simulator ft. Moawling"
 	];
